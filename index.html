@@ -8,87 +8,104 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Case Studies</a></li>
-                <li><a href="index.html">Services</a></li>
-                <li><a href="index.html">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div class="innerbox-small">
+        <div class="innerbox-large">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Case Studies</a></li>
+                    <li><a href="index.html">Services</a></li>
+                    <li><a href="index.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="contentbox">
             <h1>Your website is an investment in the success of your business.</h1>
             <p>We are here to help you succeed.</p>
             <a href="index.html" class="contactbutton">LET'S WORK TOGETHER</a>
+            </div>
         </div>
-        <img src="assets/squiggle_line_stripe.svg" alt="squiggle line" />
+        <div class="header-squiggle">
+            <img src="assets/squiggle_line_stripe.svg" alt="Squigglyline stripe">
+        </div>
     </header>
     <main>
-        <section>
-            <div>
-                <h2>Rekupe is a digital agency in Los Angeles. We use strategic UX, SEO optimization and beautiful visual designs to help your business grow. We see every project as a fresh opportunity, pushing ourselves to create new digital experiences.</h2>
-                <p>Have a question? <a href="">Click here</a> to contact us!</p>
+        <section class="outerbox">
+            <div class="innerbox-small">
+                <div class="rekupe-textblock">
+                <h2>Rekupe is a digital agency in Los Angeles.</h2>
+                    <h2>We use strategic UX, SEO optimization and beautiful visual designs to help your business grow.</h2>
+                    <h2>We see every project as a fresh opportunity, pushing ourselves to create new digital experiences.</h2>
+                </div>
+                <p>Have a question? <a href="" class="question-link">Click here</a> to contact us!</p>
             </div>
         </section>
-        <section>
-            <article>
-                <div>
+        <section class="outerbox innerbox-articles">
+            <article class="article-container">
+                <div class="article-textblock">
                     <h3>Rolling Stone</h3>
                     <img src="assets/squiggle_line.svg" alt="Squiggle Line" />
                     <p>You know Rolling Stone. It’s the definitive voice in music, politics and culture. It’s a global icon.</p>
                     <a href="">VIEW PROJECT</a>
                 </div>
-                <span>
+                <span class="article-img">
                     <img src="assets/work-image-01.jpeg" alt="Rolling stones" />
                 </span>
             </article>
-            <article>
-                <span>
-                    <img src="assets/work-image-02.jpeg" alt="Rolling stones" />
-                </span>
-                <div>
+            <article class="article-container row-right">
+                <div class="article-textblock">
                     <h3>Variety</h3>
                     <img src="assets/squiggle_line.svg" alt="Squiggle Line" />
                     <p>Variety is an industry leader for breaking entertainment news, reviews and box office results with archive of content dating back to 1905.</p>
                     <a href="">VIEW PROJECT</a>
                 </div>
+                <span class="article-img">
+                    <img src="assets/work-image-02.jpeg" alt="Rolling stones" />
+                </span>
             </article>
-            <article>
-                <div>
+            <article class="article-container">
+                <div class="article-textblock">
                     <h3>Worth</h3>
                     <img src="assets/squiggle_line.svg" alt="Squiggle Line" />
                     <p>A global media platform connecting a community that embraces worth beyond wealth.</p>
                     <a href="">VIEW PROJECT</a>
                 </div>
-                <span>
-                    <img src="assets/work-image-01.jpeg" alt="Rolling stones" />
+                <span class="article-img">
+                    <img src="assets/work-image-03.jpeg" alt="Rolling stones" />
                 </span>
             </article>
         </section>
-        <section>
-            <article>
-                <img src="assets/icon_web-design.svg" alt="Web Design" />
-                <h4>Web Design</h4>
-                <p>Good web design is how companies stand out from their competitors. High quality web design leads to increased user conversion and engagement. Through a proven web design process, we help clients launch websites and products that improve on their bottom line.</p>
-            </article>
+        <section class="outerbox">
+            <div class="innerbox-large service-wrapper">
+                <article class="service-container">
+                    <img src="assets/icon_web-design.svg" alt="Web Design" />
+                    <h4>Web Design</h4>
+                    <p>Good web design is how companies stand out from their competitors. High quality web design leads to increased user conversion and engagement. Through a proven web design process, we help clients launch websites and products that improve on their bottom line.</p>
+                </article>
+                <article class="service-container">
+                    <img src="assets/icon_web-design.svg" alt="Web Design" />
+                    <h4>Web Design</h4>
+                    <p>Good web design is how companies stand out from their competitors. High quality web design leads to increased user conversion and engagement. Through a proven web design process, we help clients launch websites and products that improve on their bottom line.</p>
+                </article>
+            </div>
         </section>
-        <section>
-            <div class="innerbox-small">
+        <section class = "outerbox form-container">
+            <div class="innerbox-large">
+                <div class="contentbox-form">
                 <h1>Let's work together</h1>
                 <p>Have a question? Need a quote? Let us know!</p>
-                <form>
-                    <label for="field-name">
-                        Naam:
-                        <input type="text" name="name" id="field-name" placeholder="Name"/>
+                <form class="form">
+                    <label class="form-label" for="field-name">
+                        Name
                     </label>
-                    <label for="field-email">
+                        <input class="form-input" type="text" name="name" id="field-name" placeholder="Name"/>
+                    <label class="form-label" for="field-email">
                         Email:
-                        <input type="text" name="email" id="field-email" placeholder="Email"/>
                     </label>
-                    <label for="field-message">
+                        <input class="form-input" type="text" name="email" id="field-email" placeholder="Email"/>
+                    <label class="form-label" for="field-message">
                         Message:
-                        <textarea name="message" id="field-message" placeholder="Message"></textarea>
                     </label>
+                        <textarea class="form-input form-messagefield" name="message" id="field-message" placeholder="Message"></textarea>
                 </form>
+                </div>
             </div>
         </section>
     </main>
