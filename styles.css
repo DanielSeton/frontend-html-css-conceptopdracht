@@ -14,7 +14,6 @@
     2. Typography
     3. Layout
         3.1 Reusables
-        3.2 Other
     4. Areas
         4.1 Header
         4.2 Introduction
@@ -32,10 +31,11 @@
 }
 
 :root{
-    --main-bg-color: #4845E4;
+    --main-bg-color: linear-gradient(90deg, rgba(69,117,228,1) 2%, rgba(93,69,228,1) 73%);
     --main-text-color: #4845E4;
+    --main-button-color: #ED4385;
+    --main-button-hover-color: #ef8bb1;
 }
-
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 
@@ -48,17 +48,13 @@ h1{
     color: white;
 }
 
-h2{
-    font-size: 2rem;
-}
-
-h3{
+h2, h3{
     font-size: 2rem;
 }
 
 h4{
     font-size: 1.5rem;
-    color: #4845E4;
+    color: var(--main-text-color);
     margin: 10px;
 }
 
@@ -75,15 +71,38 @@ p {
     color: #0C0C0C;
 }
 
+.contentbox p{
+    color: white;
+    font-size: 1.7em;
+}
+
 .service-container p{
     color: #7A7A7A;
+}
+
+.contentbox-form p{
+    color: white;
+    font-size: 1.2em;
+}
+
+footer p{
+    color: white;
+    margin: 0;
 }
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
 
-a, a:hover, a:focus, a:active {
+a, a:focus, a:active {
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.contactbutton:hover{
     text-decoration: none;
 }
 
@@ -96,7 +115,6 @@ a, a:hover, a:focus, a:active {
     padding-bottom: 80px;
     justify-content: center;
     text-align:center;
-    border: #ED4385 solid 1px;
 }
 
 .innerbox-small {
@@ -110,7 +128,6 @@ a, a:hover, a:focus, a:active {
     flex-grow: 0;
     padding: 16px;
     gap: 100px;
-    border: blue solid 1px;
 }
 
 .innerbox-large {
@@ -122,7 +139,6 @@ a, a:hover, a:focus, a:active {
     justify-content: center;
     align-items: center;
     flex-grow: 0;
-    border: blue solid 1px;
 }
 
 .contentbox {
@@ -133,12 +149,6 @@ a, a:hover, a:focus, a:active {
     /*flex-basis: 20%;*/
     max-width: 60%;
     flex-wrap: wrap;
-    border: chartreuse 1px solid;
-}
-
-.contentbox p{
-    color: white;
-    font-size: 1.7em;
 }
 
 .article-container{
@@ -148,10 +158,9 @@ a, a:hover, a:focus, a:active {
     align-items: center;
     padding-right: 2%;
     padding-left: 2%;
-    border: chartreuse 1px solid;
 }
 
-.row-right{
+.article-container:nth-child(even){
     flex-direction: row-reverse;
 }
 
@@ -166,7 +175,6 @@ a, a:hover, a:focus, a:active {
     flex-basis: 400px;
     flex-shrink: 0;
     height: 70%;
-    border: chartreuse 1px solid;
 }
 
 .article-img{
@@ -186,18 +194,16 @@ a, a:hover, a:focus, a:active {
     flex-grow: 0;
     flex-shrink: 1;
     display: flex;
+    border: 1px solid #4845E4;
     align-items: flex-start;
     text-align: left;
     flex-direction: column;
-    border: 1px solid #4845E4;
     box-shadow: rgba(0, 0, 0, 0.14) 0 3px 8px;
 }
 
 .service-container img{
     width: 60px;
 }
-
-/* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
@@ -210,8 +216,7 @@ header{
     width:100%;
     justify-content: center;
     text-align:center;
-    border: #ED4385 solid 1px;
-    background-color: var(--main-bg-color);
+    background: var(--main-bg-color);
     padding-bottom: 10%;
 }
 
@@ -227,8 +232,7 @@ header{
     flex-direction: row;
     justify-content: flex-end;
     align-content: space-between;
-    gap: 5%;
-    border: red solid 2px;
+    gap: 3%;
 }
 
 .navbar li{
@@ -246,7 +250,7 @@ header{
     font-weight: 300;
     letter-spacing: 1.5px;
     color: white;
-    background-color: #ED4385;
+    background-color: var(--main-button-color);
     border: none;
     padding: 25px 40px;
     margin: 30px 0;
@@ -256,7 +260,7 @@ header{
 
 .contactbutton:hover
 {
-    background: grey;
+    background: var(--main-button-hover-color);
 }
 
 .header-squiggle {
@@ -302,17 +306,11 @@ header{
 /* --------------- 4.5 Form ------------------- */
 
 .contentbox-form{
-    border: orange solid 1px;
     width: 60%;
 }
 
-.contentbox-form p{
-    color: white;
-    font-size: 1.2em;
-}
-
 .form-container{
-    background-color: var(--main-bg-color);
+    background: var(--main-bg-color);
     padding: 20px;
 }
 .form{
@@ -335,7 +333,6 @@ header{
     width: 100%;
     height: 60px;
     border-radius: 1px;
-    border: yellow solid 1px;
 }
 
 .form-input::placeholder{
@@ -345,7 +342,12 @@ header{
 }
 
 .form-messagefield{
-    height: 200px
+    height: 200px;
+    resize: none;
+}
+
+input:focus::placeholder{
+    color: transparent;
 }
 
 /* --------------- 4.6 Footer ------------------- */
@@ -361,16 +363,12 @@ footer
     line-height: 40px;
 }
 
-footer p{
-    color: white;
-    margin: 0;
-}
-
 /* ------------------------------- 5. Media Queries -------------------------------- */
 
 @media screen and (max-width: 576px) {
-    .navbar {
+    .navbar ul {
         justify-content: center;
+        align-items: center;
     }
     .article-container{
         flex-direction: column;
